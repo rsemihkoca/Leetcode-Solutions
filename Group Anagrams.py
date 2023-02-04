@@ -17,7 +17,7 @@ print(sol.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
 #Sorting can help us group anagrams together.
 
 #LOOP WHILE CHANGE LIST:
-
+#or unify them into one loop via sort
 
 # for item in a[:]:  # make a copy of the list
 #     if even(item):
