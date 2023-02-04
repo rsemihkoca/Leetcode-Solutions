@@ -1,5 +1,6 @@
+from typing import List
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def __init__(self, strs: List[str]) -> List[List[str]]:
         sup_list = []
         sub_list = []
 
@@ -16,4 +17,4 @@ class Solution:
     def isanagram(s, t):
         return Counter(s)== Counter(t)
 
-print(Solution.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+print(Solution(["eat", "tea", "tan", "ate", "nat", "bat"]))
