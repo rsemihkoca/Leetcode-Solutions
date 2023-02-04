@@ -1,20 +1,34 @@
 from typing import List
-class Solution:
-    def __init__(self, strs: List[str]) -> List[List[str]]:
-        sup_list = []
-        sub_list = []
 
-        for i in strs:
-            strs = strs.remove(i)
-            sub_list.append(i)
-            for z in strs:
-                if isanagram(i, z):
-                    sub_list.append(z)
-                    strs.remove(z)
-            sup_list.append[sub_list]
-        return sup_list
+class Solution: 
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        results = dict()
+        for string in strs:
+            sorted_string = "".join(sorted(string))
+            if sorted_string not in results.keys():
+                results[sorted_string] = []
 
-    def isanagram(s, t):
-        return Counter(s)== Counter(t)
+            results[sorted_string].append(string)
+        return [*results.values()]
 
-print(Solution(["eat", "tea", "tan", "ate", "nat", "bat"]))
+sol = Solution()
+print(sol.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+
+#Sorting can help us group anagrams together.
+
+#LOOP WHILE CHANGE LIST:
+
+
+# for item in a[:]:  # make a copy of the list
+#     if even(item):
+#         a.remove(item)
+# # --> a = [1, 3]
+
+
+# What NOT to do¶
+
+
+# for item in a:
+#     if even(item):
+#         a.remove(item)
+# # --> a = [1, 2, 3] !!!
