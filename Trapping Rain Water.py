@@ -2,9 +2,27 @@
 # list1 = [1, 2, 3]
 # str1 = ''.join(str(e) for e in list1)
 
+#USING LAMBDA IN LIST COMPREHENSİON
+#
+## [lambda x: x*x for x in range(10)]
+# Bu 10 adet lambda fonksiyonu YARATIR 
+# 
+### DOGRUSU:
+#
+## [(lambda x: x*x)(x) for x in range(10)]
+# VEYA
+## [x*x for x in range(10)]
+
+
+
+
+from typing import List
+import sys
+sys.setrecursionlimit(1500)
+
 class Solution1:
     def trap(self, height: List[int]) -> int:
-        #recursive çözülebilir en alt kat 
+        #recursive çözülebilir en alt kat Time error
         count_this_round = 0
         round = max(height)
             
@@ -20,7 +38,7 @@ class Solution1:
         
 class Solution:
     def trap(self, height: List[int]) -> int:
-        #recursive çözülebilir en alt kat 
+        #recursive çözülebilir en alt kat   [Previous line repeated 996 more times], memory and time limit
         count_this_round = 0
         round = max(height)
         if round == 0:     
