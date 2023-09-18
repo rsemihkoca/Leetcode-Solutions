@@ -26,7 +26,7 @@ print(odds)
 #REDUCE  ITERATIVE OLARAK CUMULATİF İŞLEM YAPAR VE TEK DEĞER DÖNDÜRÜR
 
 
-The simpler answers already given may well suit your needs, but the reduce command is very powerful at applying a rolling computation sequentially to pairs of numbers in a list.
+#The simpler answers already given may well suit your needs, but the reduce command is very powerful at applying a rolling computation sequentially to pairs of numbers in a list.
 
 def multiply(*args):
     return reduce((lambda x, y: x * y), args)
