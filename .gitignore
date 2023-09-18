@@ -1,0 +1,6 @@
+*.xml
+*.iml
+.idea/
+modules.xml
+profiles_settings.xml
+Project_Default.xml
