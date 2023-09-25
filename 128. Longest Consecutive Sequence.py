@@ -1,4 +1,5 @@
 from typing import List
+
 # Minimum çözüm
 
 class Solution:
@@ -34,51 +35,51 @@ class Solution:
 
 # Yeterli/Farklı çözüm
 
-# class Solution:
-#     def longestConsecutive(self, nums: List[int]) -> int:
-#         longest = 0
-#         num_set = set(nums)
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        longest = 0
+        num_set = set(nums)
 
-#         for n in num_set:
-#             if (n-1) not in num_set:
-#                 length = 1
-#                 while (n+length) in num_set:
-#                     length += 1
-#                 longest = max(longest, length)
+        for n in num_set:
+            if (n-1) not in num_set:
+                length = 1
+                while (n+length) in num_set:
+                    length += 1
+                longest = max(longest, length)
         
-#         return longest
+        return longest
 
 # İdeal çözüm
 
-# class Solution:
-#     def longestConsecutive(self, nums: List[int]) -> int:
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
 
-#         if len(nums) == 1:
-#             return 1
-#         if len(nums) == 0:
-#             return 0
+        if len(nums) == 1:
+            return 1
+        if len(nums) == 0:
+            return 0
 
-#         temp = sorted(list(set(nums)))
+        temp = sorted(list(set(nums)))
         
-#         i = 0
-#         j = 1
+        i = 0
+        j = 1
 
-#         count = 1
-#         curr = 1
+        count = 1
+        curr = 1
 
-#         while j < len(temp):
-#             if temp[j] - 1 == temp[i]:
+        while j < len(temp):
+            if temp[j] - 1 == temp[i]:
 
-#                 curr += 1
-#                 count = max(curr, count)
+                curr += 1
+                count = max(curr, count)
 
-#             else:
-#                 curr = 1
+            else:
+                curr = 1
             
-#             i = j
-#             j += 1
+            i = j
+            j += 1
 
-#         return count
+        return count
 
 
 print(Solution().longestConsecutive([100,4,200,1,3,2]))

@@ -1,0 +1,17 @@
+15.50 matching pairs
+16.45 Rotational Cipher
+17.55 Pair sums
+19.13 Revenue Milestones
+20.22 1 Billion Users
+
+23.02 Balanced split, Counting Triangles
+23.34
+00.39 Encrypted Words
+00.52 Change in Foreign Currency
+01.17 Balance Brackets
+01.56
+
+Queue removals
+
+Number of visible nodes
+Nodes in subtree

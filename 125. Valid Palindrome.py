@@ -1,4 +1,5 @@
-
+# if c.isalpha() or c.isnumeric():
+# c.isalnum()
 # Minimum çözüm
 
 class Solution:
@@ -38,7 +39,7 @@ class Solution:
 
         return s==s[::-1]
 
-
+#İdeal çözüm
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
