@@ -11,41 +11,28 @@ import time
 #                     continue
 #                 if (xvalue+yvalue) == target:
 #                     return [xkey+1, ykey+1]
-# Time Limit Exceeded
+# Time Limit Exceeded    
 
-
-
-
-        
-
-
-
-
-
+# Hash Table
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        
 
-        """
-        Runtime        5230 ms        Beats        5.3%
-        Memory        17.2 MB        Beats        52.59%
-        """
-               
+        val_counts = dict()
+
+
         for key, value in enumerate(numbers):
 
-            complement = target - value
-            pass_cache = set()
+            compl = target - value
+            
+            if compl in val_counts:
+                return [val_counts[compl]+1, key+1]
 
-            if value in pass_cache:
-                continue
-
-            if complement in numbers:
-                s = numbers.index(complement,key+1)
-                return [key+1, s+1]
             else:
-                pass_cache.add(value)
-                continue
+                val_counts[value] = key
 
 
+# Two Pointers
 class Solution:
     """
     Runtime    188 ms    Beats    5.36%
